@@ -194,3 +194,16 @@ join departments as d
 on d.id=e.dept_id
 group by d.name;
 
+--ANSWER 5.1
+select d.name as department_name, ROUND(AVG(salary),2) as AVERAGE_salary
+from employees as e
+join departments as d
+on d.id=e.dept_id
+group by d.name;
+
+
+--ANSWER 5.2
+SELECT e.name AS employee_name
+FROM employees e
+JOIN employees m ON e.manager_id = m.id
+WHERE e.id = m.manager_id;
